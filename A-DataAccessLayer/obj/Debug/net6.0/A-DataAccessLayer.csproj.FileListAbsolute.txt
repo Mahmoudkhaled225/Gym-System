@@ -1,0 +1,12 @@
+E:\.NET\Gym\A-DataAccessLayer\bin\Debug\net6.0\A-DataAccessLayer.deps.json
+E:\.NET\Gym\A-DataAccessLayer\bin\Debug\net6.0\A-DataAccessLayer.dll
+E:\.NET\Gym\A-DataAccessLayer\bin\Debug\net6.0\A-DataAccessLayer.pdb
+E:\.NET\Gym\A-DataAccessLayer\obj\Debug\net6.0\A-DataAccessLayer.csproj.AssemblyReference.cache
+E:\.NET\Gym\A-DataAccessLayer\obj\Debug\net6.0\A-DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+E:\.NET\Gym\A-DataAccessLayer\obj\Debug\net6.0\A-DataAccessLayer.AssemblyInfoInputs.cache
+E:\.NET\Gym\A-DataAccessLayer\obj\Debug\net6.0\A-DataAccessLayer.AssemblyInfo.cs
+E:\.NET\Gym\A-DataAccessLayer\obj\Debug\net6.0\A-DataAccessLayer.csproj.CoreCompileInputs.cache
+E:\.NET\Gym\A-DataAccessLayer\obj\Debug\net6.0\A-DataAccessLayer.dll
+E:\.NET\Gym\A-DataAccessLayer\obj\Debug\net6.0\refint\A-DataAccessLayer.dll
+E:\.NET\Gym\A-DataAccessLayer\obj\Debug\net6.0\A-DataAccessLayer.pdb
+E:\.NET\Gym\A-DataAccessLayer\obj\Debug\net6.0\ref\A-DataAccessLayer.dll

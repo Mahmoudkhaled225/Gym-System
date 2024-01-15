@@ -1,0 +1,15 @@
+E:\.NET\Gym\B-BusinessLogicLayer\bin\Debug\net6.0\B-BusinessLogicLayer.deps.json
+E:\.NET\Gym\B-BusinessLogicLayer\bin\Debug\net6.0\B-BusinessLogicLayer.dll
+E:\.NET\Gym\B-BusinessLogicLayer\bin\Debug\net6.0\B-BusinessLogicLayer.pdb
+E:\.NET\Gym\B-BusinessLogicLayer\bin\Debug\net6.0\A-DataAccessLayer.dll
+E:\.NET\Gym\B-BusinessLogicLayer\bin\Debug\net6.0\A-DataAccessLayer.pdb
+E:\.NET\Gym\B-BusinessLogicLayer\obj\Debug\net6.0\B-BusinessLogicLayer.csproj.AssemblyReference.cache
+E:\.NET\Gym\B-BusinessLogicLayer\obj\Debug\net6.0\B-BusinessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+E:\.NET\Gym\B-BusinessLogicLayer\obj\Debug\net6.0\B-BusinessLogicLayer.AssemblyInfoInputs.cache
+E:\.NET\Gym\B-BusinessLogicLayer\obj\Debug\net6.0\B-BusinessLogicLayer.AssemblyInfo.cs
+E:\.NET\Gym\B-BusinessLogicLayer\obj\Debug\net6.0\B-BusinessLogicLayer.csproj.CoreCompileInputs.cache
+E:\.NET\Gym\B-BusinessLogicLayer\obj\Debug\net6.0\B-BusinessLogicLayer.csproj.CopyComplete
+E:\.NET\Gym\B-BusinessLogicLayer\obj\Debug\net6.0\B-BusinessLogicLayer.dll
+E:\.NET\Gym\B-BusinessLogicLayer\obj\Debug\net6.0\refint\B-BusinessLogicLayer.dll
+E:\.NET\Gym\B-BusinessLogicLayer\obj\Debug\net6.0\B-BusinessLogicLayer.pdb
+E:\.NET\Gym\B-BusinessLogicLayer\obj\Debug\net6.0\ref\B-BusinessLogicLayer.dll
