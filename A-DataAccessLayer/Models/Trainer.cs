@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace A_DataAccessLayer.Models;
 
@@ -12,6 +13,6 @@ public class Trainer : BaseModel
 
 
     // public ICollection<string>? Certificates { get; set; } = new List<string>();
-    
-    public ICollection<Trainee>? Trainees { get; set; } = new List<Trainee>();
+    [JsonIgnore]
+    public ICollection<Trainee>? Trainees { get; set; }
 }

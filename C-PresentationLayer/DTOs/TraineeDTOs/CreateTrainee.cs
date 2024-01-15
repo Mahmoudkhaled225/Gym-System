@@ -1,4 +1,6 @@
-﻿namespace C_PresentationLayer.DTOs.TraineeDTOs;
+﻿using A_DataAccessLayer.Models;
+
+namespace C_PresentationLayer.DTOs.TraineeDTOs;
 
 public class CreateTrainee
 {
@@ -11,4 +13,5 @@ public class CreateTrainee
     public string? Address { get; set; }
     
     public Guid? TrainerId { get; set; }
+    
 }

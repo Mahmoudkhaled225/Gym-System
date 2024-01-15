@@ -12,5 +12,11 @@ public interface IGenericRepository<T> where T : BaseModel
     
     int update(T entity);
     
+    int updateById(Guid id);
+    
     int delete(T entity);
+    
+    int deleteById(Guid id);
+    
+    bool exists(Guid id);
 }

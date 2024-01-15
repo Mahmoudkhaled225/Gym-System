@@ -1,5 +1,6 @@
 ﻿using A_DataAccessLayer.Contexts;
 using A_DataAccessLayer.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace B_BusinessLogicLayer.A_Generic;
 
@@ -30,22 +31,36 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseModel
     public T getById(Guid id) =>
         _context.Set<T>().Find(id);
     
-        
-    
-
     public ICollection<T> getAll() =>
         _context.Set<T>().ToList();
     
-
     public int update(T entity)
     {
         _context.Set<T>().Update(entity);
         return _context.SaveChanges();
     }
 
+    public int updateById(Guid id)
+    {
+        _context.Set<T>().Update(getById(id));
+        return _context.SaveChanges();
+        
+    }
+
     public int delete(T entity)
     {
         _context.Set<T>().Remove(entity);
         return _context.SaveChanges();
+    }
+
+    public int deleteById(Guid id)
+    {
+        _context.Set<T>().Remove(getById(id));
+        return _context.SaveChanges();
+    }
+
+    public bool exists(Guid id)
+    {
+        return _context.Set<T>().Any(e => e.Id == id);
     }
 }

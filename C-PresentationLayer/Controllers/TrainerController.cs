@@ -19,6 +19,8 @@ public class TrainerController : ApiControllerBase
     
     
     [HttpPost("{create}")]
+    [ProducesResponseType(typeof(ReturnedTrainer), StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public IActionResult Create([FromBody] CreateTrainer dto)
     {
         var trainer = new Trainer
@@ -35,20 +37,25 @@ public class TrainerController : ApiControllerBase
         return Ok(mappedTrainer);
     }
     
+    
     [HttpGet("{id:guid}")]
+    [ProducesResponseType(typeof(ReturnedTrainer), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public IActionResult getOneById([FromRoute] Guid id)
     {
         var trainer = _repository.getById(id);
         if (trainer == null)
-            return NotFound();
+            return NotFound("Trainer not found with this id");
         var mappedTrainer = _mapper.Map<ReturnedTrainer>(trainer);
         return Ok(mappedTrainer);
     }
     
     [HttpGet("{all}")]
+    [ProducesResponseType(typeof(ICollection<ReturnedTrainer>), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public IActionResult GetAll()
     {
-        var trainers = _repository.getAll();
+        var trainers = _repository.GetTrainersWithTrainees();
         if (trainers == null)
             return NotFound();
         var mappedTrainers = _mapper.Map<IEnumerable<ReturnedTrainer>>(trainers);
@@ -75,8 +82,15 @@ public class TrainerController : ApiControllerBase
     // }
     
     [HttpDelete("{id:guid}")]
+    // [ProducesResponseType(typeof(ReturnedTrainer), StatusCodes.Status200OK)]
     public IActionResult Delete([FromRoute] Guid id)
     {
+        // if (_repository.exists(id))
+        //     return NotFound();
+        
+        // _repository.deleteById(id);
+        // return Ok();
+        
         var trainer = _repository.getById(id);
         if (trainer == null)
             return NotFound();

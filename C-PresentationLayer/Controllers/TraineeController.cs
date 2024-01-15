@@ -9,15 +9,18 @@ namespace C_PresentationLayer.Controllers;
 public class TraineeController : ApiControllerBase
 {
     private readonly ITraineeRepository _repository;
+    private readonly ITrainerRepository _trainerRepository;
     private readonly IMapper _mapper;
 
-    public TraineeController(ITraineeRepository repository, IMapper mapper)
+    public TraineeController(ITraineeRepository repository,ITrainerRepository trainerRepository,IMapper mapper)
     {
         _repository = repository;
+        _trainerRepository = trainerRepository;
         _mapper = mapper;
     }
     
     [HttpPost("{create}")]
+    [ProducesResponseType(typeof(ReturnedTrainee), StatusCodes.Status201Created)]    
     public IActionResult Create([FromBody] CreateTrainee dto)
     {
         var trainee = new Trainee
@@ -26,7 +29,8 @@ public class TraineeController : ApiControllerBase
             Email = dto.Email,
             Phone = dto.Phone,
             Address = dto.Address,
-            TrainerId = dto.TrainerId
+            TrainerId = dto.TrainerId,
+            // Trainer = _trainerRepository.getById((Guid)dto.TrainerId)
         };
         _repository.create(trainee);
 
@@ -36,9 +40,10 @@ public class TraineeController : ApiControllerBase
     }
 
     [HttpGet("{id:guid}")]
+    [ProducesResponseType(typeof(ReturnedTrainee), StatusCodes.Status200OK)]
     public IActionResult getOneById([FromRoute] Guid id)
     {
-        var trainee = _repository.getById(id);
+        var trainee = _repository.getTraineeByIdWithTrainer(id);
         if (trainee == null)
             return NotFound();
         var mappedTrainee = _mapper.Map<ReturnedTrainee>(trainee);

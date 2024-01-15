@@ -55,7 +55,7 @@ public class GymContext: DbContext
         
     }
 
-    DbSet<Trainer> Trainers { get; set; } = null!;
-    
-    DbSet<Trainee> Trainees { get; set; } = null!;
+    public DbSet<Trainer> Trainers { get; set; } = null!;
+
+    public DbSet<Trainee> Trainees { get; set; } = null!;
 }

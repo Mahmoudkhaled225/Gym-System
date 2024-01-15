@@ -14,4 +14,5 @@ public class ReturnedTrainer
     
     public Guid Id { get; set; }
     
+    public ICollection<ReturnedTraineeForTrainer> Trainees { get; set; }
 }

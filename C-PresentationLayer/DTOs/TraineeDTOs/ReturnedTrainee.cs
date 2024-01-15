@@ -1,4 +1,5 @@
 ﻿using A_DataAccessLayer.Models;
+using C_PresentationLayer.DTOs.TrainerDTOs;
 
 namespace C_PresentationLayer.DTOs.TraineeDTOs;
 
@@ -16,7 +17,7 @@ public class ReturnedTrainee
     
     public Guid TrainerId { get; set; }
     
-    public Trainer Trainer { get; set; }
+    public ReturnedTrainer Trainer { get; set; }
     
     public DateTime CreatedAt { get; set; }
 

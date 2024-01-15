@@ -11,5 +11,7 @@ public class MappingProfile: Profile
         
         CreateMap<A_DataAccessLayer.Models.Trainee, DTOs.TraineeDTOs.CreateTrainee>().ReverseMap();
         CreateMap<A_DataAccessLayer.Models.Trainee, DTOs.TraineeDTOs.ReturnedTrainee>().ReverseMap();
+        CreateMap<A_DataAccessLayer.Models.Trainee, DTOs.TrainerDTOs.ReturnedTraineeForTrainer>().ReverseMap();
+
     }
 }

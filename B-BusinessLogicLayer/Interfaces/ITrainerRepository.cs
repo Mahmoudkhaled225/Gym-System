@@ -8,4 +8,6 @@ public interface ITrainerRepository : IGenericRepository<Trainer>
     //add trainee to trainer collection
     // public void AddTrainee(Trainee trainee);
     
+    public ICollection<Trainer> GetTrainersWithTrainees();
+    
 }
