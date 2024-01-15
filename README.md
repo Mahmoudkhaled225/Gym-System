@@ -1,5 +1,5 @@
 # Gym-System
-## this my first ASP.Net Web API application with .NET 6 platform
+## This my first ASP.Net Web API application with .NET 6 platform
 
 ### Project Description
 it is a gym system that connect Trainer and Trainee
